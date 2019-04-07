@@ -1,0 +1,55 @@
+{
+  "name": "Save Photos",
+  "version": "2",
+  "manifest_version": 2,
+  "description": "Save Images to Google Photos",
+  "icons": {
+    "16": "images/img16.png",
+    "32": "images/img32.png",
+    "48": "images/img48.png",
+    "128": "images/img128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "identity",
+    "storage",
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "contextMenus"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": false
+    },
+    {
+      "matches": ["https://photos-extension.firebaseapp.com/*"],
+      "js": ["oauthRedirect.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "images/img16.png",
+      "32": "images/img32.png",
+      "48": "images/img48.png",
+      "128": "images/img128.png"
+    },
+    "default_title": "google photos extension",
+    "default_popup": "popup.html"
+  },
+  "oauth2": {
+    "client_id": "812304807244-9uccbrt0kgmjrmsi0tbnrcl3sjv5c17h.apps.googleusercontent.com",
+    "scopes": ["https://www.googleapis.com/auth/photoslibrary"]
+  },
+  "incognito": "split"
+}

@@ -1,0 +1,13 @@
+{
+  "oauthResponse": "http://localhost/oauth2callback#state=state_parameter_passthrough_value&access_token=ya29.GlveBkpvHu7O5YWTh3wVn6tfrN-L_B3mIhhXLh_FSpbAo9J6YSrzWZJpvExkAKKRJ5RhcA7WP1Fv4navgzFW-e9XAQVsqDqA1ZMx9BKuD1avvXmGdASGTzFWtrYh&token_type=Bearer&expires_in=3600&scope=https://www.googleapis.com/auth/drive.metadata.readonly",
+  "albums": [
+    {
+      "id": "AMMPA6-0EzjBRn9oG9wisES_sBTATbX8TKFcaOfF-vPXOSKDcZvQF2tRZFNttx8kZhFTQCoGaDXi",
+      "title": "Pondicherry 2017",
+      "productUrl": "https://photos.google.com/lr/album/AMMPA6-0EzjBRn9oG9wisES_sBTATbX8TKFcaOfF-vPXOSKDcZvQF2tRZFNttx8kZhFTQCoGaDXi",
+      "mediaItemsCount": "8",
+      "coverPhotoBaseUrl": "https://lh3.googleusercontent.com/lr/AGWb-e4aNC-Qt1CkVECyzitPqVeBL4gSzgEOcIX9ihByfsUKbvgXYsWOmSqQOIHhqFMdr1bqqI4cwFFMEmvdsOS9_92dKLb5lKo4wAg7PW8RsltoIDCozmV0EHbA7agAUdlTj9Hn9Vrt8U-nWZMSg6Ov1ALaMUErk3w8HJb6QLRP6VnFiWSEqA1ULSkqqFW4pDIzl-vyxgqzXeijgBxIwW6hRv-Rfj4sdPG3XvCZ3EmaenAY1ASGPQMtDuWMrS1giL2ZkR1-p43Tio1HqJKsnsRUdtTADDJle9QKrgepL4xDs3VkPXFhbwqijEOysln29SVXPPjzYy7UJYS8yLvmLHtN9Oal0E75bT63NHh82lNlCX3Ya_Nc0qasCxilu6m-MlSBtY7ulfBT6rhMLsq-mtNnpZu1I3PaA_VmcKKj7APr2fORSxUnGvCIhkVXCDwakjdYThxjKJKpOFTtQ4miknfz1EiUuthRgPF1uh56yLLtPcBmr-ImWM23xou0XMQfCVoKtLeWHtS4FclvAXi_fG5y8u9S6TLT4NCSbXvKPRVxHNDW1P3-Kuawu2X7h6vu8_gMsgi1JhrX506r9suVRsDU8A_Gu00Cb8mg-JhZvUU3JtzoJPAsL6I3Nu85grh-M2Y-R4nThW_ytYVKldvsIEP3th3bkcIBWftNNlizotDVT4KJoymX6z7-m61WmkpMjY_EhX7elDbBf6Xs3qR7irqhQqFIPUAtpJE-SiM-1hqvfDUDmTSWIuU9cNKexi7MGH8sv-5WA-6ATkPpiAg0yiofc1rihAF_JoOCzWGqEOQVs64iMCtf6NkDIjaGBPbVmR2k7s3wL3KgBUnJP88Dh2BDY8w7zli8wYmaDyKHraTp7shm5N_vy_Ec-K_kp_P1xw7QeZmmM5g",
+      "coverPhotoMediaItemId": "AMMPA6-nmQqmKcpxNDKEHzcGGCuYKa5juix6WB4BdkxNlfp_mdxuIxZL97vsK-aFgX13Q2Z2VwqpR11yOih2WmG_8bUEqNZWJw"
+    }
+  ]
+}
