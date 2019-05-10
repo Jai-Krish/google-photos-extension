@@ -179,6 +179,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       case 'createAlbum':
         createAlbum(sendResponse, request.data);
         break;
+      case 'downloadMultipleFiles':
+        downloadFromUrls(sendResponse, request.data);
+        break;
       case 'logout':
         logout(sendResponse);
         break;
@@ -195,6 +198,16 @@ function getAlbums(sendResponse) {
     console.log('getAlbums', res);
     sendResponse(res);
   });
+}
+
+function downloadFromUrls(sendResponse, urls) {
+  imageQueue = imageQueue.concat(urls.reverse());
+  if (imageQueue.length !== urls.length) {
+    sendResponse('Queued');
+    return;
+  }
+  saveImage(imageQueue[0]);
+  sendResponse('Started');
 }
 
 function logout(sendResponse) {

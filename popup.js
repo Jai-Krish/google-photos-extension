@@ -20,3 +20,15 @@ $('#createAlbum').click(() => {
     console.log('createAlbum', res);
   });
 });
+
+$('#downloadMultipleFiles').click(() => {
+  var urls = prompt("Paste urls (' ' or \\n)");
+  if (urls && urls !== '') {
+    chrome.runtime.sendMessage(
+      { type: 'downloadMultipleFiles', data: urls.split(' ') },
+      res => {
+        console.log('downloadMultipleFiles', res);
+      }
+    );
+  }
+});
