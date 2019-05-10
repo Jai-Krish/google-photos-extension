@@ -2,6 +2,7 @@ const client_id = 'ba01a18f2a0c4e9fa3130fa8a140ef48';
 const redirect_uri = chrome.identity.getRedirectURL('oauth2');
 var resolveAuthorize;
 var selectedAlbum;
+imageQueue = [];
 
 function getImageName(url) {
   const regexMatch = /[\w-]+.(jpg|png|jpeg|gif)/g.exec(url);
@@ -13,6 +14,14 @@ function getImageName(url) {
 
 function saveImageToAlbum(info, tab) {
   const imageUrl = info.srcUrl;
+  imageQueue.push(imageUrl);
+  if (imageQueue.length > 1) {
+    return;
+  }
+  saveImage(imageQueue[0]);
+}
+
+function saveImage(imageUrl) {
   var imageName = getImageName(imageUrl);
   fetch(imageUrl)
     .then(res => {
@@ -71,6 +80,10 @@ function saveImageToAlbum(info, tab) {
     )
     .then(res => {
       console.log('item added', res);
+      imageQueue.shift();
+      if (imageQueue.length > 0) {
+        saveImage(imageQueue[0]);
+      }
     });
 }
 
